@@ -17,6 +17,11 @@ services:
       - ./php:/var/www/html
     networks:
       - internal
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password-here'
 networks:
   internal:
     driver: bridge
